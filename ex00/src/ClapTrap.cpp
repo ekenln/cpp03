@@ -3,14 +3,18 @@
 /*                                                        ::::::::            */
 /*   ClapTrap.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: elleneklund <elleneklund@student.codam.      +#+                     */
+/*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:14:04 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/10 16:07:34 by elleneklund   ########   odam.nl         */
+/*   Updated: 2025/03/19 14:10:19 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap() : _hitPoints(10), _energyPoints(10), _attackDamage(10) {
+	std::cout << "default constructor called\n";
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(10) {
 	std::cout << "Constructor called\n\n";
@@ -50,7 +54,10 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	this->_hitPoints -= amount;
+	if (amount > this->_hitPoints)
+		this->_hitPoints = 0;
+	else
+		this->_hitPoints -= amount;
 	std::cout << this->_name << " got attacked and lost " << amount << " hit points\n\n";
 }
 

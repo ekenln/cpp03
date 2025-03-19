@@ -3,14 +3,18 @@
 /*                                                        ::::::::            */
 /*   ClapTrap.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: elleneklund <elleneklund@student.codam.      +#+                     */
+/*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:14:04 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/10 17:13:36 by elleneklund   ########   odam.nl         */
+/*   Updated: 2025/03/19 14:03:14 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap() : _hitPoints(10), _energyPoints(10), _attackDamage(10) {
+	std::cout << "default constructor called\n";
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(10) {
 	std::cout << "Constructor called\n\n";

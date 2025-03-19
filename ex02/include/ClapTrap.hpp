@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ClapTrap.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: elleneklund <elleneklund@student.codam.      +#+                     */
+/*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:09:06 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/10 16:40:17 by elleneklund   ########   odam.nl         */
+/*   Updated: 2025/03/19 13:57:20 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ClapTrap
 		int			_attackDamage;
 	
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& old);
 		ClapTrap(std::string name, int hit, int energy, int attack);

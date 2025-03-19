@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: elleneklund <elleneklund@student.codam.      +#+                     */
+/*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:00:00 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/10 16:06:45 by elleneklund   ########   odam.nl         */
+/*   Updated: 2025/03/19 14:02:39 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
+	ClapTrap hej; //chaeck for default constructor 
 	ClapTrap boy("boy");
 	boy.attack("fakeTarget");
 	boy.takeDamage(10);
