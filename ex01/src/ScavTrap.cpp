@@ -3,23 +3,43 @@
 /*                                                        ::::::::            */
 /*   ScavTrap.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: elleneklund <elleneklund@student.codam.      +#+                     */
+/*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 16:09:25 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/10 17:21:11 by elleneklund   ########   odam.nl         */
+/*   Updated: 2025/03/20 16:47:27 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
+#include "../include/ScavTrap.hpp"
+#include "../include/ClapTrap.hpp"
 
+ScavTrap::ScavTrap() : ClapTrap() {
+	_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
+}
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	std::cout << "ScavTrap " << this->_name << " constructor called\n";
+	_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 };
 
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap " << this->_name << " destructor called\n";
+}
+
+ScavTrap::ScavTrap(const ScavTrap& old) : ClapTrap(old)
+{
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& S) 
+{
+	if (this != &S)
+	{
+		ClapTrap::operator=(S);
+	}
 }
 
 void	ScavTrap::attack(const std::string& target)

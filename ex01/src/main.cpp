@@ -3,15 +3,15 @@
 /*                                                        ::::::::            */
 /*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: elleneklund <elleneklund@student.codam.      +#+                     */
+/*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:00:00 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/10 17:11:00 by elleneklund   ########   odam.nl         */
+/*   Updated: 2025/03/20 16:40:40 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "../include/ClapTrap.hpp"
+#include "../include/ScavTrap.hpp"
 
 
 int	main(void)
