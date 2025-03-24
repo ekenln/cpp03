@@ -6,7 +6,7 @@
 /*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:09:06 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/19 13:54:15 by eeklund       ########   odam.nl         */
+/*   Updated: 2025/03/24 15:35:35 by elleneklund   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,4 @@ class ClapTrap
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
-
 };

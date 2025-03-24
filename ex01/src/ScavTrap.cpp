@@ -6,7 +6,7 @@
 /*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 16:09:25 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/20 16:47:27 by eeklund       ########   odam.nl         */
+/*   Updated: 2025/03/24 15:37:44 by elleneklund   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 };
+
+ScavTrap::ScavTrap(const ScavTrap& old) : ClapTrap(old) {};
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& S){}
 
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap " << this->_name << " destructor called\n";
