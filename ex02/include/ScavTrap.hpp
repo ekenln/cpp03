@@ -6,7 +6,7 @@
 /*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 16:09:22 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/28 15:00:03 by eeklund       ########   odam.nl         */
+/*   Updated: 2025/03/31 11:32:47 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : ClapTrap
+class ScavTrap : public ClapTrap
 {
 	public:
 

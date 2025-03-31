@@ -6,7 +6,7 @@
 /*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:09:06 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/24 15:36:34 by elleneklund   ########   odam.nl         */
+/*   Updated: 2025/03/31 16:47:19 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class ClapTrap
 		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& old);
-		// ClapTrap(std::string name, int hit, int energy, int attack);
 		ClapTrap& operator=(const ClapTrap& C);
 		~ClapTrap();
 
