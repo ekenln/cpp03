@@ -6,7 +6,7 @@
 /*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 16:09:25 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/31 16:56:57 by eeklund       ########   odam.nl         */
+/*   Updated: 2025/04/01 16:40:09 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ ScavTrap::~ScavTrap() {
 //Inheritance creates a relationship where a ScavTrap "is-a" ClapTrap
 //This is the foundation of polymorphism — derived class objects can be used wherever base class objects are expected.
 
-ScavTrap::ScavTrap(const ScavTrap& old) : ClapTrap(old) {}
+ScavTrap::ScavTrap(const ScavTrap& old) : ClapTrap(old) {
+	std::cout << "ScavTrap copy constructor called\n";
+}
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& S) 
 {
@@ -48,13 +50,13 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& S)
 void	ScavTrap::attack(const std::string& target)
 {
 	if (this->_energyPoints <= 0)
-		std::cout << "ScavTrap " << this->_name << " tried to attack but has no energy\n\n";
+		std::cout << "\033[1;33mScavTrap " << this->_name << " tried to attack but has no energy\033[0m\n\n";
 	else if (this->_hitPoints <= 0)
 		std::cout << "ScavTrap " << this->_name << " tried to attack but has no hit points\n\n";
 	else
 	{
-		std::cout << "ScavTrap " << this->_name << " attacks ";
-		std::cout << target << ", causing " << this->_attackDamage << " points of damage!\n";
+		std::cout << "\033[1;33mScavTrap " << this->_name << " attacks ";
+		std::cout << target << ", causing " << this->_attackDamage << " points of damage!\033[0m\n";
 		this->_energyPoints--;
 	}
 }

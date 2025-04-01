@@ -6,7 +6,7 @@
 /*   By: eeklund <eeklund@student.42.fr>              +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/03/10 15:14:04 by elleneklund   #+#    #+#                 */
-/*   Updated: 2025/03/31 16:56:26 by eeklund       ########   odam.nl         */
+/*   Updated: 2025/04/01 16:39:25 by eeklund       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoint
 	std::cout << "ClapTrap " << _name << " Constructor called\n\n";
 };
 
-ClapTrap::ClapTrap(const ClapTrap& old) : _name(old._name), _hitPoints(old._hitPoints), _energyPoints(old._energyPoints), _attackDamage(old._attackDamage) {};
+ClapTrap::ClapTrap(const ClapTrap& old) : _name(old._name), _hitPoints(old._hitPoints), _energyPoints(old._energyPoints), _attackDamage(old._attackDamage) {
+	std::cout << "ClapTrap copy constructor called\n";
+};
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& C) 
 {
@@ -64,7 +66,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		this->_hitPoints += amount;
 		this->_energyPoints--;
-		std::cout << "Successfully repaired\n\n";
+		std::cout << _name << " is successfully repaired\n\n";
 	}
 	else
 	{
